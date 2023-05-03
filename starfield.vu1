@@ -1,0 +1,19 @@
+.vu
+.align 4
+
+.global vu1_starfield_begin
+.global vu1_starfield_end
+
+;/--------------------------------------------------
+;/ StarField VU1 MicroProgram
+;/
+;/    VI00 : GifTag pointer (XGKICK)
+;/    
+;/--------------------------------------------------
+
+vu1_starfield_begin:
+                nop                             xgkick vi00
+                
+                nop[e]                          nop
+                nop                             nop         ; Delay slot
+vu1_starfield_end:
